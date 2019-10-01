@@ -76,7 +76,7 @@
 **
 **
 ***********************************************************************/
-#ifdef WIN32
+#if defined(WIN32) && !defined(__MINGW32__)
 /* These also work for __MWERKS__ */
 #define JS_EXTERN_API(__type) extern __declspec(dllexport) __type
 #define JS_EXPORT_API(__type) __declspec(dllexport) __type
